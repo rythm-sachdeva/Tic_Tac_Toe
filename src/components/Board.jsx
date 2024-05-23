@@ -1,26 +1,11 @@
 import Square from "./Square"
-import { useState } from "react"
 import '../app.scss'
 
-const Board = () => {
-    const [square,setSquare] = useState(Array(9).fill(null))
-    
-    const handleSquareClick = (clickedPosition) =>{
-        
-    setSquare((currentSquares) =>{
-        return (currentSquares.map((squarevalue,position)=>{
-            if(clickedPosition===position)
-             return 'X';
-            else
-            return squarevalue;
-        })
-        );
-    })
-
-    }
+const Board = (props) => {
+   
 
     const rendersquare = (position) => {
-       return( <Square value={square[position]} onClick={() => handleSquareClick(position)} />);
+       return( <Square value={props.square[position]} onClick={() => props.handleclick(position)} />);
 
     } ;
 
@@ -46,4 +31,4 @@ const Board = () => {
   )
 }
 
-export default Board
+export default Board;
