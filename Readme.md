@@ -1,2 +1,2 @@
-# This is a Modern Looking Tic Tac Toe Game
- 
+# This is a Modern Tic Tac Toe Game
+
