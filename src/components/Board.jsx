@@ -5,7 +5,8 @@ const Board = (props) => {
    
 
     const rendersquare = (position) => {
-       return( <Square value={props.squares[position]} onClick={() => props.handleclick(position)} />);
+      const iswiningsquare = props.winningline.includes(position)
+       return( <Square value={props.squares[position]} onClick={() => props.handleclick(position)} iswiningsquare={iswiningsquare}/>);
 
     } ;
 

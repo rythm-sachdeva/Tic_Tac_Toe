@@ -11,9 +11,13 @@ export function calculatingwinner(square) {
   ];
   for(let i=0 ;i< line.length;i++){
     const [a,b,c] = line[i]
-    if(square[a] && square[a]===square[b] && square[a]===square[c]) return square[a];
+    if(square[a] && square[a]===square[b] && square[a]===square[c]) 
+     return { winner:square[a],winningline:line[i]};
   }
-  return null;
+  return {
+    winner:null,
+    winningline:[]
+  };
 
 }
 
