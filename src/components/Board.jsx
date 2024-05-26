@@ -5,7 +5,7 @@ const Board = (props) => {
    
 
     const rendersquare = (position) => {
-       return( <Square value={props.square[position]} onClick={() => props.handleclick(position)} />);
+       return( <Square value={props.squares[position]} onClick={() => props.handleclick(position)} />);
 
     } ;
 
